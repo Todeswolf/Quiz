@@ -28,5 +28,11 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
+
+        // Quiz-Button klickbar machen
+        btnQuiz.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+            startActivity(intent);
+        });
     }
 }

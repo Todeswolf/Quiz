@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,7 +33,7 @@ public class QuizActivity extends AppCompatActivity {
         answerButton1 = findViewById(R.id.answerButton1);
         answerButton2 = findViewById(R.id.answerButton2);
         answerButton3 = findViewById(R.id.answerButton3);
-        questionTextView = findViewById(R.id.questionTextView);
+        questionTextView = findViewById(R.id.questionText);
 
         View.OnClickListener answerClickListener = this::checkAnswer;
         answerButton1.setOnClickListener(answerClickListener);
@@ -50,11 +51,12 @@ public class QuizActivity extends AppCompatActivity {
             answerButton2.setText(answers.get(1));
             answerButton3.setText(answers.get(2));
         } else {
-            // Quiz beendet, zur LeaderboardActivity navigieren
-            Intent intent = new Intent(QuizActivity.this, LeaderboardActivity.class);
+            // Quiz beendet, zur LeaderboardActivity navigieren TODO
+            /*Intent intent = new Intent(QuizActivity.this, LeaderboardActivity.class);
             intent.putExtra("SCORE", score);
             startActivity(intent);
-            finish();
+            finish();*/
+            Toast.makeText(this, "Quiz wurde geschafft mit " + score + " Punkten", Toast.LENGTH_SHORT).show();
         }
     }
 
