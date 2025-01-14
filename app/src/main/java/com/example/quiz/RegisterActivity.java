@@ -1,16 +1,14 @@
 package com.example.quiz;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -22,15 +20,15 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_login);
 
         // Layout-Elemente verknüpfen
-        EditText emailEditText = findViewById(R.id.emailEditText);
-        EditText passwordEditText = findViewById(R.id.passwordEditText);
-        Button btnOkay = findViewById(R.id.btnOkay);
+        EditText usernameEditText = findViewById(R.id.usernameField);
+        EditText passwordEditText = findViewById(R.id.passwordField);
+        ImageButton btnSend= findViewById(R.id.btnSend);
 
-        btnOkay.setOnClickListener(v -> {
-            String email = emailEditText.getText().toString();
+        btnSend.setOnClickListener(v -> {
+            String email = usernameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
 
             // Prüfen, ob Felder leer sind

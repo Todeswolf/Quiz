@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity
         // Buttons aus dem Layout verknüpfen
         Button btnLogin = findViewById(R.id.btnLogin);
         Button btnRegister = findViewById(R.id.btnRegister);
+        Button btnQuiz = findViewById(R.id.btnQuiz);
 
         // Login-Button klickbar machen
         btnLogin.setOnClickListener(v -> {
