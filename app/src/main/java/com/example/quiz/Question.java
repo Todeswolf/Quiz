@@ -28,10 +28,11 @@ public class Question
 
     public String getCorrectAnswer() 
     {
-        return answers.get(correctAnswerIndex);
+        return answers.get(correctAnswerIndex-1); //Index orientiert sich noch an Start = 1 TODO: anpassen
     }
-    
-    public static ArrayList<Question> questionManager() {
+
+    //Wichtig: Index startet aktuell noch bei 1
+    public static ArrayList<Question> getQuestions() {
         ArrayList<Question> questions = new ArrayList<Question>();
         questions.add(new Question("Name der Stadt in der das Sommercamp Informatik stattfindet?", Arrays.asList("Hamburg", "Jena", "Berlin"), 2));
         questions.add(new Question("Wo liegt Jena?", Arrays.asList("Thüringen", "Bayern", "Schweiz"), 1));
